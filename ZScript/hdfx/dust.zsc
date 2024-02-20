@@ -26,7 +26,7 @@ class HDFXDust : VisualThinker
 
         dust.hdp = hdp;
     }
-    
+
     override void PostBeginPlay()
     {
         hl = random(27,88);
@@ -42,7 +42,7 @@ class HDFXDust : VisualThinker
 
         Super.Tick();
         vel += drift_v;
-        
+
         if (--ttl == 0)
         {
             Destroy();
