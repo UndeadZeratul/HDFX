@@ -70,7 +70,7 @@ class HDFXDustHandler : EventHandler
 {
 	override void WorldTick()
 	{
-		if (Level.Time % hdfx_dustrate)
+		if (hdfx_dustrate < 1 || Level.Time % hdfx_dustrate)
 			return;
 
 		for (int i = 0; i < MAXPLAYERS; i++)
